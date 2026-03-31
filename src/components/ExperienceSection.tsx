@@ -7,10 +7,10 @@ const experiences = [
     company: "VIR Innovations",
     period: "Internship",
     points: [
-      "Firmware development using C for ARM-based microcontrollers",
-      "Peripheral interfacing — UART, I2C, LCD, RTC, EEPROM",
-      "Debugging hardware-software integration issues",
-      "Testing and validation of embedded systems",
+      "Developed efficient and scalable firmware in C for ARM-based microcontrollers, ensuring reliable system performance in real-time environments",
+      "Designed and implemented robust peripheral interfaces, including UART, I2C, LCD, RTC, and EEPROM, enabling seamless hardware communication",
+      "Diagnosed and resolved complex hardware–software integration issues through structured debugging and low-level analysis",
+      "Executed comprehensive testing and validation of embedded systems to ensure stability, accuracy, and fault tolerance",
     ],
   },
 ];
