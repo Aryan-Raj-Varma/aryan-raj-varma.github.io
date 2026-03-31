@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import gestoTalkImg from "@/assets/gesto-talk.png";
 
 const projects = [
   {
@@ -14,6 +15,7 @@ const projects = [
       "Transaction history with linked list storage",
       "Real-time balance updates and withdrawal logic",
     ],
+    image: undefined as string | undefined,
   },
   {
     title: "Banking System in C",
@@ -26,6 +28,7 @@ const projects = [
       "Linked list-based transaction tracking",
       "Menu-driven interface with error handling",
     ],
+    image: undefined as string | undefined,
   },
   {
     title: "Gesto Talk — Gesture Vocalizer",
@@ -38,9 +41,9 @@ const projects = [
       "LCD display + mobile app output via Bluetooth",
       "Assistive technology for speech-impaired users",
     ],
+    image: gestoTalkImg,
   },
 ];
-
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -72,6 +75,12 @@ const ProjectsSection = () => {
               onClick={() => setSelectedProject(project)}
               className="glass-card-hover p-6 cursor-pointer group flex flex-col"
             >
+              {/* Project image */}
+              {project.image && (
+                <div className="rounded-lg overflow-hidden mb-3 -mx-2 -mt-2">
+                  <img src={project.image} alt={project.title} className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+              )}
               {/* Project number */}
               <span className="font-heading text-3xl font-bold text-primary/20 mb-3">
                 0{i + 1}
@@ -106,6 +115,11 @@ const ProjectsSection = () => {
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
+            {selectedProject?.image && (
+              <div className="rounded-lg overflow-hidden">
+                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-48 object-cover rounded-lg" />
+              </div>
+            )}
             <p className="text-muted-foreground text-sm">{selectedProject?.summary}</p>
             <div>
               <h5 className="text-xs font-heading tracking-[0.15em] text-primary mb-2">
