@@ -29,7 +29,7 @@ const AboutSection = () => {
           className="glass-card p-6 md:p-10"
         >
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
-            I am an <span className="text-foreground font-medium">Embedded Systems Engineer</span> with a strong I am an <span className="text-foreground font-medium">Embedded Systems Engineer</span> with a strong foundation in <span className="text-primary">C and Embedded C programming</span> and hands-on experience developing firmware for microcontroller-based systems. My expertise includes peripheral interfacing, communication protocols such as UART, I2C, and SPI, and systematic debugging of hardware–software interactions. hands-on experience developing firmware for microcontroller-based systems. My expertise includes peripheral interfacing, communication protocols such as UART, I2C, and SPI, and systematic debugging of hardware–software interactions.
+            I am an <span className="text-foreground font-medium">Embedded Systems Engineer</span> with a strong foundation in <span className="text-primary">C programming</span> and hands-on experience developing firmware for microcontroller-based systems. My expertise includes peripheral interfacing, communication protocols such as UART, I2C, and SPI, and systematic debugging of hardware–software interactions.
           </p>
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
             I have worked on real-time embedded applications, focusing on building reliable, efficient, and scalable systems. My approach emphasizes clean architecture, precise control at the hardware level, and robust integration between software and electronics.
