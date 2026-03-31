@@ -115,6 +115,11 @@ const ProjectsSection = () => {
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
+            {selectedProject?.image && (
+              <div className="rounded-lg overflow-hidden">
+                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-48 object-cover rounded-lg" />
+              </div>
+            )}
             <p className="text-muted-foreground text-sm">{selectedProject?.summary}</p>
             <div>
               <h5 className="text-xs font-heading tracking-[0.15em] text-primary mb-2">
