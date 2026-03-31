@@ -93,7 +93,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-base md:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+          className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mb-10 leading-relaxed"
         >
           Engineering reliable embedded systems where hardware meets intelligent firmware.
         </motion.p>
