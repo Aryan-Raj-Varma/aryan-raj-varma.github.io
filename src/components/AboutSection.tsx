@@ -29,19 +29,13 @@ const AboutSection = () => {
           className="glass-card p-6 md:p-10"
         >
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
-            I'm an <span className="text-foreground font-medium">Embedded Systems Engineer</span> with
-            strong proficiency in <span className="text-primary">C programming</span> and hands-on
-            experience working with microcontrollers, communication protocols, and firmware debugging.
+            I am an <span className="text-foreground font-medium">Embedded Systems Engineer</span> with a strong foundation in <span className="text-primary">C programming</span> and hands-on experience developing firmware for microcontroller-based systems. My expertise includes peripheral interfacing, communication protocols such as UART, I2C, and SPI, and systematic debugging of hardware–software interactions.
           </p>
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
-            My work spans peripheral interfacing (UART, I2C, SPI), real-time system development, and
-            hardware-software integration. I thrive at the intersection of low-level programming and
-            hardware design, building systems that are reliable and efficient.
+            I have worked on real-time embedded applications, focusing on building reliable, efficient, and scalable systems. My approach emphasizes clean architecture, precise control at the hardware level, and robust integration between software and electronics.
           </p>
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-            Based in <span className="text-foreground">Hyderabad, India</span>, I'm passionate about
-            creating embedded solutions that bridge the gap between physical hardware and intelligent
-            software.
+            Based in <span className="text-foreground">Hyderabad, India</span>, I am driven by a deep interest in designing embedded solutions that seamlessly connect physical hardware with intelligent, purpose-driven software.
           </p>
         </motion.div>
       </div>
