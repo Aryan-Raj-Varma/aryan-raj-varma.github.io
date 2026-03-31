@@ -1,23 +1,21 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import profileImg from "@/assets/profile.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover opacity-30"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-      </div>
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl">
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.8], [0, -100]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.95]);
+
+  return (
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <motion.div style={{ opacity, y, scale }} className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl">
         {/* Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -28,24 +26,20 @@ const HeroSection = () => {
           <div className="relative">
             {/* Circuit board traces behind profile */}
             <svg className="absolute -inset-10 w-[calc(100%+80px)] h-[calc(100%+80px)]" viewBox="0 0 300 300" fill="none">
-              {/* Horizontal traces */}
               <path d="M0 150 H100 L110 140 H130" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
               <path d="M170 150 H190 L200 160 H300" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
               <path d="M0 120 H80 L90 110 H110" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
               <path d="M190 120 H210 L220 130 H300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
               <path d="M0 180 H70 L85 170 H115" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
               <path d="M185 180 H220 L230 190 H300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
-              {/* Vertical traces */}
               <path d="M150 0 V100 L140 110 V125" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
               <path d="M150 175 V190 L160 200 V300" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
               <path d="M120 0 V80 L130 95 V115" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
               <path d="M180 185 V210 L170 220 V300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
-              {/* Diagonal accents */}
               <path d="M100 100 L115 115" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
               <path d="M185 185 L200 200" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
               <path d="M100 200 L115 185" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
               <path d="M185 115 L200 100" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
-              {/* Junction dots */}
               <circle cx="100" cy="150" r="2.5" fill="hsla(200,80%,55%,0.4)" />
               <circle cx="200" cy="150" r="2.5" fill="hsla(200,80%,55%,0.4)" />
               <circle cx="150" cy="100" r="2.5" fill="hsla(200,80%,55%,0.4)" />
@@ -124,17 +118,18 @@ const HeroSection = () => {
             CONTACT ME
           </a>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
+        style={{ opacity }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
       >
-        <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex justify-center pt-1.5">
-          <div className="w-1 h-2 rounded-full bg-primary" />
-        </div>
+        <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+          <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex justify-center pt-1.5">
+            <div className="w-1 h-2 rounded-full bg-primary" />
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
