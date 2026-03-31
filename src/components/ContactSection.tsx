@@ -1,5 +1,5 @@
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Mail, Linkedin, Github, MapPin } from "lucide-react";
 
 const contacts = [
