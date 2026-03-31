@@ -13,7 +13,7 @@ const contacts = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Aryan Raj Varma",
-    href: "https://www.linkedin.com/in/aryan-raj-varma-koricherla-255078265",
+    href: "https://linkedin.com/in/aryan-raj-varma-koricherla-255078265",
   },
   {
     icon: Github,
