@@ -112,14 +112,6 @@ const HeroSection = () => {
             VIEW PROJECTS
           </a>
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-primary border-primary/40 hover:border-primary/70 hover:shadow-[0_0_25px_hsla(var(--glow-primary)/0.3)] transition-all"
-          >
-            RESUME
-          </a>
-          <a
             href="#contact"
             className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-foreground hover:shadow-[0_0_20px_hsla(var(--glow-primary)/0.2)] transition-all"
           >
