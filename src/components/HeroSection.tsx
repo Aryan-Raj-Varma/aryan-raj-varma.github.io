@@ -26,7 +26,38 @@ const HeroSection = () => {
           className="mb-8"
         >
           <div className="relative">
-            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden glass-card p-1 glow-border">
+            {/* Circuit board traces behind profile */}
+            <svg className="absolute -inset-10 w-[calc(100%+80px)] h-[calc(100%+80px)]" viewBox="0 0 300 300" fill="none">
+              {/* Horizontal traces */}
+              <path d="M0 150 H100 L110 140 H130" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
+              <path d="M170 150 H190 L200 160 H300" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
+              <path d="M0 120 H80 L90 110 H110" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              <path d="M190 120 H210 L220 130 H300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              <path d="M0 180 H70 L85 170 H115" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              <path d="M185 180 H220 L230 190 H300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              {/* Vertical traces */}
+              <path d="M150 0 V100 L140 110 V125" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
+              <path d="M150 175 V190 L160 200 V300" stroke="hsla(200,80%,55%,0.25)" strokeWidth="1.5" />
+              <path d="M120 0 V80 L130 95 V115" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              <path d="M180 185 V210 L170 220 V300" stroke="hsla(200,80%,55%,0.15)" strokeWidth="1" />
+              {/* Diagonal accents */}
+              <path d="M100 100 L115 115" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
+              <path d="M185 185 L200 200" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
+              <path d="M100 200 L115 185" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
+              <path d="M185 115 L200 100" stroke="hsla(200,80%,55%,0.2)" strokeWidth="1" />
+              {/* Junction dots */}
+              <circle cx="100" cy="150" r="2.5" fill="hsla(200,80%,55%,0.4)" />
+              <circle cx="200" cy="150" r="2.5" fill="hsla(200,80%,55%,0.4)" />
+              <circle cx="150" cy="100" r="2.5" fill="hsla(200,80%,55%,0.4)" />
+              <circle cx="150" cy="200" r="2.5" fill="hsla(200,80%,55%,0.4)" />
+              <circle cx="80" cy="120" r="2" fill="hsla(200,80%,55%,0.3)" />
+              <circle cx="220" cy="120" r="2" fill="hsla(200,80%,55%,0.3)" />
+              <circle cx="70" cy="180" r="2" fill="hsla(200,80%,55%,0.3)" />
+              <circle cx="230" cy="180" r="2" fill="hsla(200,80%,55%,0.3)" />
+              <circle cx="120" cy="80" r="2" fill="hsla(200,80%,55%,0.3)" />
+              <circle cx="180" cy="210" r="2" fill="hsla(200,80%,55%,0.3)" />
+            </svg>
+            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden glass-card p-1 glow-border relative z-10">
               <img
                 src={profileImg}
                 alt="Koricherla Aryan Raj Varma"
@@ -36,7 +67,7 @@ const HeroSection = () => {
               />
             </div>
             <motion.div
-              className="absolute -inset-2 rounded-full border border-primary/20"
+              className="absolute -inset-2 rounded-full border border-primary/20 z-10"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
