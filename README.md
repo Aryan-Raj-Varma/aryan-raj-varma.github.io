@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# aryan-raj-varma.github.io
 
 TODO: Document your project here
