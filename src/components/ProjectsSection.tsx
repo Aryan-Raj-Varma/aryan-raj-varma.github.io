@@ -15,6 +15,7 @@ const projects = [
       "Transaction history with linked list storage",
       "Real-time balance updates and withdrawal logic",
     ],
+    image: undefined as string | undefined,
   },
   {
     title: "Banking System in C",
@@ -27,6 +28,7 @@ const projects = [
       "Linked list-based transaction tracking",
       "Menu-driven interface with error handling",
     ],
+    image: undefined as string | undefined,
   },
   {
     title: "Gesto Talk — Gesture Vocalizer",
@@ -39,9 +41,9 @@ const projects = [
       "LCD display + mobile app output via Bluetooth",
       "Assistive technology for speech-impaired users",
     ],
+    image: gestoTalkImg,
   },
 ];
-
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
