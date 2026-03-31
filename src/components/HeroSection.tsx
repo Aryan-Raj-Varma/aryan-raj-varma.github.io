@@ -93,7 +93,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-base md:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+          className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mb-10 leading-relaxed"
         >
           Engineering reliable embedded systems where hardware meets intelligent firmware.
         </motion.p>
@@ -107,13 +107,21 @@ const HeroSection = () => {
         >
           <a
             href="#projects"
-            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-primary border-primary/30 hover:border-primary/60 transition-all"
+            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-primary border-primary/40 hover:border-primary/70 hover:shadow-[0_0_25px_hsla(var(--glow-primary)/0.3)] transition-all"
           >
             VIEW PROJECTS
           </a>
           <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-primary border-primary/40 hover:border-primary/70 hover:shadow-[0_0_25px_hsla(var(--glow-primary)/0.3)] transition-all"
+          >
+            RESUME
+          </a>
+          <a
             href="#contact"
-            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-foreground"
+            className="glass-card-hover px-8 py-3 font-heading text-xs tracking-[0.2em] text-foreground hover:shadow-[0_0_20px_hsla(var(--glow-primary)/0.2)] transition-all"
           >
             CONTACT ME
           </a>
