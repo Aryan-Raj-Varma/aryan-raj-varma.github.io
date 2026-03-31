@@ -1,5 +1,5 @@
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Mail, Linkedin, Github, MapPin } from "lucide-react";
 
 const contacts = [
@@ -61,8 +61,8 @@ const ContactSection = () => {
                 transition={{ duration: 0.5, delay: 0.1 * i }}
               >
                 <Wrapper
-                  {...(c.href ? { href: c.href, target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="glass-card-hover p-5 flex items-center gap-4 block"
+                  {...(c.href ? { href: c.href, target: "_blank", rel: "noopener noreferrer", onClick: (e: React.MouseEvent) => { e.preventDefault(); window.open(c.href, "_blank"); } } : {})}
+                  className="glass-card-hover p-5 flex items-center gap-4 block cursor-pointer"
                 >
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
