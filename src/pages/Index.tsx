@@ -8,6 +8,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import ScrollFadeSection from "@/components/ScrollFadeSection";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -31,11 +32,11 @@ const Index = () => {
           <Navbar />
           <main className="relative">
             <HeroSection />
-            <AboutSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ProjectsSection />
-            <ContactSection />
+            <ScrollFadeSection><AboutSection /></ScrollFadeSection>
+            <ScrollFadeSection><SkillsSection /></ScrollFadeSection>
+            <ScrollFadeSection><ExperienceSection /></ScrollFadeSection>
+            <ScrollFadeSection><ProjectsSection /></ScrollFadeSection>
+            <ScrollFadeSection><ContactSection /></ScrollFadeSection>
           </main>
         </motion.div>
       )}
