@@ -75,6 +75,12 @@ const ProjectsSection = () => {
               onClick={() => setSelectedProject(project)}
               className="glass-card-hover p-6 cursor-pointer group flex flex-col"
             >
+              {/* Project image */}
+              {project.image && (
+                <div className="rounded-lg overflow-hidden mb-3 -mx-2 -mt-2">
+                  <img src={project.image} alt={project.title} className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+              )}
               {/* Project number */}
               <span className="font-heading text-3xl font-bold text-primary/20 mb-3">
                 0{i + 1}
